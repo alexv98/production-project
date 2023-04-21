@@ -21,7 +21,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
     module: {
       rules: buildLoaders(options), // обработка файлов, выходящих за рамки JS
     },
-    resolve: buildResolves(), // для таких файлов не будут указаны расширения при импорте
+    resolve: buildResolves(options), // для таких файлов не будут указаны расширения при импорте
     devtool: isDev ? 'inline-source-map' : undefined,
     devServer: isDev ? buildDevServer(options) : undefined,
   }
