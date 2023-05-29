@@ -10,6 +10,12 @@ module.exports = {
     'plugin:i18next/recommended'
   ],
   overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off'
+      }
+    }
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -34,6 +40,12 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 0,
     '@typescript-eslint/no-floating-promises': 1,
     // '@typescript-eslint/naming-convention': 1,
-    'i18next/no-literal-string': ['error', { markupOnly: true }]
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['data-testid']
+      }
+    ]
   }
 }

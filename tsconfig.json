@@ -32,6 +32,7 @@
     // import * as React from 'react';
     // можно писать такой
     // import React from 'react';
+    "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "lib": [
       "es2017",
@@ -42,5 +43,12 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "./config/jest/setupTests.ts",
+    ".eslintrc.js",
+    "src",
+    "./babel.config.js",
+    "./jest.config.js"
+  ],
 }
