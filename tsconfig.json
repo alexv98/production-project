@@ -47,7 +47,8 @@
   "include": [
     "./config/jest/setupTests.ts",
     ".eslintrc.js",
-    "src",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
     "./babel.config.js",
     "./jest.config.js"
   ],
