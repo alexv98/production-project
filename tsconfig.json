@@ -5,10 +5,9 @@
     // Однако это не означает, что теперь вовсе нельзя использовать any.
     // Это означает лишь, что в подобных ситуация разработчик должен явно писать any,
     "noImplicitAny": true,
-//    "strictNullChecks": true,
     "module": "ESNext",
     // В какую спецификацию компилируем: для поддержки большинства браузеров
-    "target": "es6",
+    "target": "es5",
     "jsx": "react-jsx",
     // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
     "allowJs": true,
@@ -32,12 +31,7 @@
     // import * as React from 'react';
     // можно писать такой
     // import React from 'react';
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
-    "lib": [
-      "es2017",
-      "dom"
-    ]
+    "allowSyntheticDefaultImports": true
   },
   "ts-node": {
     "compilerOptions": {
@@ -46,10 +40,7 @@
   },
   "include": [
     "./config/jest/setupTests.ts",
-    ".eslintrc.js",
     "./src/**/*.ts",
     "./src/**/*.tsx",
-    "./babel.config.js",
-    "./jest.config.js"
-  ],
+  ]
 }

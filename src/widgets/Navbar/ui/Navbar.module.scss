@@ -9,10 +9,8 @@
 
 .links {
   margin-left: auto;
+}
 
-  a {
-    &:first-child {
-      margin-right: 15px;
-    }
-  }
+.mainLink {
+  margin-right: 15px;
 }
