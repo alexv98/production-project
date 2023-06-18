@@ -7664,6 +7664,11 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.9.tgz"
   integrity sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==
 
+graphicsmagick@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/graphicsmagick/-/graphicsmagick-0.0.1.tgz"
+  integrity sha512-gOi18BRscOlT9851djya76BY1eOI0651LORQyIyA/cb4oPBzeK9Hixz2f+ey5QXnEHnjU5K+Qy4VGrFMYsI1Xw==
+
 gzip-size@^6.0.0:
   version "6.0.0"
   resolved "https://registry.npmjs.org/gzip-size/-/gzip-size-6.0.0.tgz"
