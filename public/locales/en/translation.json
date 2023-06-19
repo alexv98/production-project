@@ -1,9 +1,10 @@
 {
+  "Войти": "Login",
   "Главная": "Home",
+  "Короткий язык": "ENG",
   "О сайте": "About",
-  "Страница не найдена": "Page not found",
-  "Язык": "English",
-  "Произошла непредвиденная ошибка!": "An unexpected error has occurred!",
   "Обновить страницу": "Refresh the page",
-  "Короткий язык": "ENG"
+  "Произошла непредвиденная ошибка!": "An unexpected error has occurred!",
+  "Страница не найдена": "Page not found",
+  "Язык": "English"
 }

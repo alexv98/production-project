@@ -1,7 +1,18 @@
 {
+  "Login": "Login",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " Amet animi illum laborum laudantium magni, natus quae? Animi impedit iure modi nesciunt vel voluptatum": {
+      " Ad facilis hic magni nesciunt officia repellat": {
+        "": ""
+      }
+    }
+  },
+  "TestText": "TestText",
   "throw error": "throw error",
+  "Войти": "Войти",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
+  "Домашняя страница": "Домашняя страница",
   "О сайте": "О сайте",
   "Обновить страницу": "Обновить страницу",
   "Переключить": "Переключить",
