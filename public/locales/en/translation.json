@@ -6,5 +6,9 @@
   "Обновить страницу": "Refresh the page",
   "Произошла непредвиденная ошибка!": "An unexpected error has occurred!",
   "Страница не найдена": "Page not found",
-  "Язык": "English"
+  "Язык": "English",
+  "Форма авторизации": "Authorization form",
+  "Неверный логин или пароль": "Wrong login or password",
+  "Введите логин": "Enter login",
+  "Введите пароль": "Enter password"
 }
