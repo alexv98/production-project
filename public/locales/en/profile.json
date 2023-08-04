@@ -3,5 +3,10 @@
   "Редактировать": "Edit",
   "Ваше имя": "Your name",
   "Ваша фамилия": "Your lastname",
-  "Ваша страна": "Your country"
+  "Ваша страна": "Your country",
+  "Некорректный город": "Incorrect city",
+  "Некорректный возраст": "Incorrect age",
+  "Не заполнены поля имени и фамилии": "Name and lastname fields is empty",
+  "Данные не указаны": "Data is empty",
+  "При сохранении возникла ошибка на сервере": "Server error while saving data"
 }
