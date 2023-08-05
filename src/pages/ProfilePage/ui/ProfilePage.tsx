@@ -43,7 +43,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   const readonly = useSelector(getProfileReadonly);
   const validateErrors = useSelector(getProfileValidateErrors);
 
-  const validateErrorsTranslates = {
+  const validateErrorsTranslates: Record<string, string> = {
     [ValidateProfileErrors.SERVER_ERROR]: t('При сохранении возникла ошибка на сервере'),
     [ValidateProfileErrors.NO_DATA]: t('Данные не указаны'),
     [ValidateProfileErrors.INCORRECT_USER_DATA]: t('Не заполнены поля имени и фамилии'),
