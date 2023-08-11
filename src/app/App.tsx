@@ -14,7 +14,7 @@ function App() {
   const inited = useSelector(getUserInited);
 
   useEffect(() => {
-    dispatch(userActions.initAuthData);
+    dispatch(userActions.initAuthData());
   }, [dispatch]);
 
   return (
