@@ -1,5 +1,6 @@
 {
   "": "",
+  "ARTICLES PAGE": "ARTICLES PAGE",
   "Login": "Login",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Amet animi illum laborum laudantium magni, natus quae? Animi impedit iure modi nesciunt vel voluptatum": {
@@ -31,6 +32,7 @@
   "Главная страница": "Главная страница",
   "Данные не указаны": "Данные не указаны",
   "Домашняя страница": "Домашняя страница",
+  "Копировать": "Копировать",
   "Не заполнены поля имени и фамилии": "Не заполнены поля имени и фамилии",
   "Неверный логин или пароль": "Неверный логин или пароль",
   "Некорректный возраст": "Некорректный возраст",
