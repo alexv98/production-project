@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { ArticleDetails } from 'entities/Article';
@@ -15,13 +15,16 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import {
   fetchCommentsByArticleId,
 } from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { AddCommentForm } from 'features/addNewComment';
 import {
-  articleDetailsCommentsReducer, getArticleComments,
+  addCommentForArticle,
+} from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
+import {
+  articleDetailsCommentsReducer,
+  getArticleComments,
 } from '../../model/slice/articleDetailsCommentsSlice';
 import cls from './ArticleDetails.module.scss';
-import {
-  getArticleCommentsIsLoading,
-} from '../../model/selectors/comments/comments';
+import { getArticleCommentsIsLoading } from '../../model/selectors/comments/comments';
 
 interface ArticleDetailsPageProps {
   className?: string
@@ -44,6 +47,10 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     dispatch(fetchCommentsByArticleId(id));
   });
 
+  const onSendComment = useCallback((text: string) => {
+    dispatch(addCommentForArticle(text));
+  }, [dispatch]);
+
   if (!id) {
     return (
       // eslint-disable-next-line i18next/no-literal-string
@@ -58,6 +65,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
       <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <ArticleDetails id={id} />
         <Text title={t('Комментарии')} />
+        <AddCommentForm onSendComment={onSendComment} />
         <CommentList
           isLoading={isLoading}
           comments={comments}

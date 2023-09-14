@@ -10,7 +10,7 @@ const initialState: LoginSchema = {
   isLoading: false,
 };
 
-export const loginSLice = createSlice({
+export const loginSlice = createSlice({
   name: 'login',
   initialState,
   reducers: {
@@ -38,5 +38,5 @@ export const loginSLice = createSlice({
   },
 });
 
-export const { actions: loginActions } = loginSLice;
-export const { reducer: loginReducer } = loginSLice;
+export const { actions: loginActions } = loginSlice;
+export const { reducer: loginReducer } = loginSlice;

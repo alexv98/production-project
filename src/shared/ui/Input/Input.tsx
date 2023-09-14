@@ -11,6 +11,7 @@ interface InputProps extends HTMLInputProps{
   value?: string | number;
   onChange?: (value: string) => void;
   autofocus?: boolean;
+  defaultPlaceholder?: boolean;
   readonly?: boolean
 }
 
@@ -22,6 +23,7 @@ export const Input = memo((props: InputProps) => {
     value,
     onChange,
     autofocus = false,
+    defaultPlaceholder = false,
     readonly,
     ...otherProps
   } = props;
@@ -37,6 +39,7 @@ export const Input = memo((props: InputProps) => {
   return (
     <div className={cls.InputWrapper}>
       {placeholder
+        && !defaultPlaceholder
         && (
           <div className={cls.placeholder}>
             {`${placeholder}>`}
@@ -49,6 +52,7 @@ export const Input = memo((props: InputProps) => {
         onChange={onChangeHandler}
         autoFocus={autofocus}
         readOnly={readonly}
+        placeholder={defaultPlaceholder ? placeholder : ''}
         {...otherProps}
       />
     </div>
