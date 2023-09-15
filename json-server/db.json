@@ -194,12 +194,12 @@
     },
     {
       "id": "2",
-      "firstname": "Tarasdsa",
-      "lastname": "Klichko",
-      "age": 10,
-      "currency": "EUR",
-      "country": "Ukraine",
-      "city": "Kiev",
+      "firstname": "Ivan",
+      "lastname": "Ivanov",
+      "age": 67,
+      "currency": "RUB",
+      "country": "Kazakhstan",
+      "city": "Saratov",
       "username": "prosto user",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZj30GqCw6ppxNeuEwU4Spr3-nIU3eM5PwtA&usqp=CAU"
     }
