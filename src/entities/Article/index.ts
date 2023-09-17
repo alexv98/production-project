@@ -7,3 +7,5 @@ export {
   getArticleDetailsError,
   getArticleDetailsIsLoading,
 } from './model/selectors/articleDetails';
+
+export { ArticleView } from './model/types/article';

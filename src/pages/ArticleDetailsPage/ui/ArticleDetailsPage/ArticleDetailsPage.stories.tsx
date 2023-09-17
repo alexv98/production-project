@@ -18,6 +18,10 @@ export default {
 const Template: ComponentStory<typeof ArticleDetailsPage> = () => <ArticleDetailsPage />;
 
 const article: Article = {
+  user: {
+    id: '1',
+    username: 'Alex',
+  },
   id: '1',
   title: 'Javascript news',
   subtitle: 'Что нового в JS за 2022 год?',

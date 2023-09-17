@@ -1,13 +1,20 @@
-import React, { memo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
-import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
-import { Article, ArticleView } from 'entities/Article';
-import cls from './ArticlesPage.module.scss';
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Article, ArticleView } from '../../model/types/article';
+import { ArticleList } from './ArticleList';
 
-interface ArticlesPageProps {
-  className?: string
-}
+export default {
+  title: 'entities/Article/ArticleList',
+  component: ArticleList,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+  args: {
+    to: '/',
+  },
+} as ComponentMeta<typeof ArticleList>;
+
+const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />;
 
 const article = {
   id: '1',
@@ -86,21 +93,38 @@ const article = {
   ],
 } as Article;
 
-const ArticlesPage = (props: ArticlesPageProps) => {
-  const { className } = props;
-  const { t } = useTranslation();
-  return (
-    <div className={classNames(cls.ArticlesPage, {}, [className])}>
-      <ArticleList
-        view={ArticleView.GRID}
-        articles={new Array(16)
-          .fill(0)
-          .map((item, index) => ({
-            ...article, id: String(index),
-          }))}
-      />
-    </div>
-  );
+export const isLoadingList = Template.bind({});
+isLoadingList.args = {
+  isLoading: true,
+  articles: [],
+  view: ArticleView.LIST,
 };
 
-export default memo(ArticlesPage);
+export const isLoadingGrid = Template.bind({});
+isLoadingGrid.args = {
+  isLoading: true,
+  articles: [],
+  view: ArticleView.GRID,
+};
+
+export const Grid = Template.bind({});
+Grid.args = {
+  isLoading: false,
+  articles: new Array(9)
+    .fill(0)
+    .map((item, index) => ({
+      ...article, id: String(index),
+    })),
+  view: ArticleView.GRID,
+};
+
+export const List = Template.bind({});
+List.args = {
+  isLoading: false,
+  articles: new Array(9)
+    .fill(0)
+    .map((item, index) => ({
+      ...article, id: String(index),
+    })),
+  view: ArticleView.LIST,
+};
