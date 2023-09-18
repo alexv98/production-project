@@ -9,3 +9,5 @@ export {
 } from './model/selectors/articleDetails';
 
 export { ArticleView } from './model/types/article';
+
+export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
