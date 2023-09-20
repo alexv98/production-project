@@ -15,6 +15,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { AddCommentForm } from 'features/addNewComment';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Button } from 'shared/ui/Button/Button';
+import { Page } from 'shared/ui/Page/Page';
 import {
   addCommentForArticle,
 } from '../../model/services/addCommentForArticle/addCommentForArticle';
@@ -69,7 +70,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <Button onClick={onBackToList}>
           {t('Назад к списку')}
         </Button>
@@ -80,7 +81,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
           isLoading={isLoading}
           comments={comments}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };

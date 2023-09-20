@@ -7,8 +7,20 @@ export const getArticlesPageIsLoading = (
 
 export const getArticlesPageError = (
   state: StateSchema,
-) => state.articlesPage?.error || '';
+) => state.articlesPage?.error;
 
 export const getArticlesPageView = (
   state: StateSchema,
 ) => state.articlesPage?.view || ArticleView.LIST;
+
+export const getArticlesPageNum = (
+  state: StateSchema,
+) => state.articlesPage?.page || 1;
+
+export const getArticlesPageLimit = (
+  state: StateSchema,
+) => state.articlesPage?.limit || 4;
+
+export const getArticlesPageHasMore = (
+  state: StateSchema,
+) => state.articlesPage?.hasMore;
