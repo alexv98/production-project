@@ -24,6 +24,5 @@ export const Page = ({ className, children, onScrollEnd }: PageProps) => {
       {children}
       <div ref={triggerRef} />
     </section>
-
   );
 };
