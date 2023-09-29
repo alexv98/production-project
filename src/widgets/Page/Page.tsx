@@ -1,10 +1,11 @@
 import React, {
-  MutableRefObject, ReactNode, useRef, UIEvent,
+  memo,
+  MutableRefObject, ReactNode, UIEvent, useRef,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { getScrollSave, getScrollSaveByPath, scrollSaveActions } from 'features/ScrollSave';
+import { getScrollSaveByPath, scrollSaveActions } from 'features/ScrollSave';
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
@@ -18,7 +19,13 @@ interface PageProps {
   onScrollEnd?: () => void;
 }
 
-export const Page = ({ className, children, onScrollEnd }: PageProps) => {
+export const Page = memo((props: PageProps) => {
+  const {
+    className,
+    children,
+    onScrollEnd,
+  } = props;
+
   const dispatch = useAppDispatch();
   const { pathname } = useLocation();
   const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
@@ -49,7 +56,7 @@ export const Page = ({ className, children, onScrollEnd }: PageProps) => {
       onScroll={onScroll}
     >
       {children}
-      <div ref={triggerRef} />
+      {onScrollEnd ? <div ref={triggerRef} className={cls.trigger} /> : null}
     </section>
   );
-};
+});

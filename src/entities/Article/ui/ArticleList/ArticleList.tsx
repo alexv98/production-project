@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import {
   ArticleListSkeletonItem,
 } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
+import { Text, TextSize } from 'shared/ui/Text/Text';
 import { Article, ArticleView } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
@@ -38,6 +39,15 @@ export const ArticleList = memo((props: ArticleListProps) => {
       key={article.id}
     />
   );
+
+  if (!isLoading && !articles.length) {
+    return (
+      <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+        {/* eslint-disable-next-line i18next/no-literal-string */}
+        <Text size={TextSize.L} title="Статьи не найдены" />
+      </div>
+    );
+  }
 
   return (
     <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
