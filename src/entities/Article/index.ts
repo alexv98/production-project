@@ -4,6 +4,8 @@ export {
 } from './model/types/article';
 export { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
 
+export { articleDetailsReducer } from './model/slice/artilceDetailsSlice';
+
 export {
   getArticleDetailsData,
   getArticleDetailsError,
