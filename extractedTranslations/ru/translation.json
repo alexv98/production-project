@@ -1,6 +1,7 @@
 {
   "": "",
   "ARTICLES PAGE": "ARTICLES PAGE",
+  "HABR APP": "HABR APP",
   "Login": "Login",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Amet animi illum laborum laudantium magni, natus quae? Animi impedit iure modi nesciunt vel voluptatum": {
@@ -9,6 +10,7 @@
       }
     }
   },
+  "Production": "Production",
   "Profile": "Profile",
   "ProfilePage": "ProfilePage",
   "TestText": "TestText",
@@ -58,8 +60,11 @@
   "Произошла ошибка": "Произошла ошибка",
   "Произошла ошибка при загрузке профиля": "Произошла ошибка при загрузке профиля",
   "Профиль": "Профиль",
+  "Редактирование статьи, id = ": "Редактирование статьи, id = ",
   "Редактировать": "Редактировать",
   "Рекомендуем": "Рекомендуем",
+  "Создание статьи": "Создание статьи",
+  "Создать статью": "Создать статью",
   "Сортировать по": "Сортировать по",
   "Сортировать по ": "Сортировать по ",
   "Сохранить": "Сохранить",
