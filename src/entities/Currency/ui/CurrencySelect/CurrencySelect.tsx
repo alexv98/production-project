@@ -18,7 +18,7 @@ export const CurrencySelect = memo((
     className, value, onChange, readonly,
   }: CurrencySelectProps,
 ) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('profile');
 
   const currencyOptions = useMemo(
     () => Object.entries(Currency).map((val) => ({ value: val[0], content: val[1] })),
@@ -32,7 +32,7 @@ export const CurrencySelect = memo((
   return (
     <Select
       className={classNames('', {}, [className])}
-      label={t('Укажите валюту')}
+      label={t('Валюта')}
       options={currencyOptions}
       value={value}
       onChange={onChangeHandler}

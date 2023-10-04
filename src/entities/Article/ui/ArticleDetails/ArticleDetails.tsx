@@ -84,7 +84,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   } else if (error) {
     content = (
       // eslint-disable-next-line i18next/no-literal-string
-      <Text align={TextAlign.CENTER} title="Произошла ошибка при загрузке статьи." />
+      <Text align={TextAlign.CENTER} title="Произошла ошибка при загрузке статьи" />
     );
   } else {
     content = (
